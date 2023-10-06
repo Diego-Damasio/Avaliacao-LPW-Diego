@@ -12,18 +12,22 @@
     </header>
     <section>
         <form action="cad.php" method="get">
-           <label for="Email">Email</label>
+            <label for="Email">Email</label>
             <input type="text" name="email" id="idemail">
+            <input type="submit" value="Enviar código">
+        </form>
+        <form action="cad.php" method="get">
+            <label for="digitarcodrecebido">Digite o código que você recebeu em seu email</label>
+            <input type="text" name="digitarcodrecebido" id="iddigitarcodrecebido">
+            <input type="submit" value="Próximo">
+        </form>
+        <form action="cad.php" method="get">
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="idsenha">
-            <input type="submit" value="Enviar">
+            <label for="confirmarnovasenha">Confirmar nova senha</label>
+            <input type="password" name="confirmarnovasenha" id="idconfirmarnovasenha">
+            <input type="submit" value="Senha alterada!">
         </form>
-        <div class="text-center">
-            <a class="small" href="#">Esqueçeu a senha?</a>
-          </div>
-          <div class="text-center">
-            <a class="small" href="#">Cadastrar!</a>
-          </div>
     </section>
     
 </body>

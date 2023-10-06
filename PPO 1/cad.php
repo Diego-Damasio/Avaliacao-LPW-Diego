@@ -15,11 +15,13 @@
         <?php 
             $nome = $_GET["nome"] ??"sem nome";
             $sobrenome = $_GET["sobrenome"] ?? "desconhecido";
+            $usuario = $_GET["usuario"]?? "**";
             echo "<p>É um prazer te conhecer! <strong>$nome $sobrenome</strong>";
             $conexao = new PDO("mysql:host=127.0.0.1; dbname=Cadastro","root","");
-            $inserir = $conexao->prepare("INSERT INTO cadastro values (:nome, :sobrenome)");
+            $inserir = $conexao->prepare("INSERT INTO cadastro values (:nome, :sobrenome, :usuario)");
             $inserir->bindParam(":nome", $nome);
             $inserir->bindParam(":sobrenome", $sobrenome);
+            $inserir->bindParam(":usuario", $usuario);
             $inserir->execute();
         ?>
        <?php 
